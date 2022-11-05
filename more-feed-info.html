@@ -379,50 +379,6 @@
         </svg>
       </div>
       <div id="comments-container" class="more-feed-info-container15">
-        <div class="comment-comment">
-          <div class="comment-container">
-            <span class="comment-text"><span>Dane doe</span></span>
-          </div>
-          <div class="comment-container1">
-            <p class="comment-comment1">
-              <span>
-                Really energetic and innovative organization that is truly
-                providing a resource to farmers as well as to communities by
-                increasing access to fresh and local food.
-              </span>
-            </p>
-          </div>
-          <div class="comment-container2">
-            <svg viewBox="0 0 1024 1024" class="comment-like">
-              <path
-                d="M932 550l-114 262q-26 42-74 42h-346q-40 0-70-30t-30-70v-334q0-36 26-62l274-272 18 20q24 24 38 52 6 14 4 28l-40 198h236q34 0 59 26t25 60v46q0 18-6 34zM86 854v-470h84q18 0 31 12t13 30v384q0 18-13 31t-31 13h-84z">
-              </path>
-            </svg><svg viewBox="0 0 1024 1024" class="comment-dislike">
-              <path
-                d="M810 128h172v512h-172v-512zM640 128q34 0 60 26t26 60v426q0 34-26 60l-280 282-46-46q-18-18-18-44v-14l42-196h-270q-34 0-60-25t-26-59v-86q0-16 6-32l130-300q20-52 78-52h384z">
-              </path>
-            </svg>
-          </div>
-        </div>
-        <div class="comment-comment comment-root-class-name">
-          <div class="comment-container">
-            <span class="comment-text"><span>Raja doe</span></span>
-          </div>
-          <div class="comment-container1">
-            <p class="comment-comment1"><span>Nice ! haha</span></p>
-          </div>
-          <div class="comment-container2">
-            <svg viewBox="0 0 1024 1024" class="comment-like">
-              <path
-                d="M932 550l-114 262q-26 42-74 42h-346q-40 0-70-30t-30-70v-334q0-36 26-62l274-272 18 20q24 24 38 52 6 14 4 28l-40 198h236q34 0 59 26t25 60v46q0 18-6 34zM86 854v-470h84q18 0 31 12t13 30v384q0 18-13 31t-31 13h-84z">
-              </path>
-            </svg><svg viewBox="0 0 1024 1024" class="comment-dislike">
-              <path
-                d="M810 128h172v512h-172v-512zM640 128q34 0 60 26t26 60v426q0 34-26 60l-280 282-46-46q-18-18-18-44v-14l42-196h-270q-34 0-60-25t-26-59v-86q0-16 6-32l130-300q20-52 78-52h384z">
-              </path>
-            </svg>
-          </div>
-        </div>
       </div>
       <div class="social-bar-social-bar social-bar-root-class-name5">
         <a href="https://twitter.com/EarthDayCanada" target="_blank" rel="noreferrer noopener" class="social-bar-link">
@@ -535,6 +491,38 @@
         </div>
       `;
     };
+    const commentContainer = document.getElementById("comments-container");
+    commentContainer.innerHTML = ""; // Anh - to empty the container for now
+    const comments = JSON.parse(window.localStorage.getItem("comments"));
+    comments.forEach ((x, index) => {
+      const newComment = document.createElement("div");
+      newComment.className = "comment-comment";
+      newComment.innerHTML = 
+      `
+      <div class="comment-comment">
+          <div class="comment-container">
+            <span class="comment-text"><span>${x.author}</span></span>
+          </div>
+          <div class="comment-container1">
+            <p class="comment-comment1">
+              <span>
+                ${x.content}
+              </span>
+            </p>
+          </div>
+          <div class="comment-container2">
+            <svg viewBox="0 0 1024 1024" class="comment-like">
+              <path d="M932 550l-114 262q-26 42-74 42h-346q-40 0-70-30t-30-70v-334q0-36 26-62l274-272 18 20q24 24 38 52 6 14 4 28l-40 198h236q34 0 59 26t25 60v46q0 18-6 34zM86 854v-470h84q18 0 31 12t13 30v384q0 18-13 31t-31 13h-84z">
+              </path>
+            </svg><svg viewBox="0 0 1024 1024" class="comment-dislike">
+              <path d="M810 128h172v512h-172v-512zM640 128q34 0 60 26t26 60v426q0 34-26 60l-280 282-46-46q-18-18-18-44v-14l42-196h-270q-34 0-60-25t-26-59v-86q0-16 6-32l130-300q20-52 78-52h384z">
+              </path>
+            </svg>
+          </div>
+        </div>
+    `;
+    commentContainer.append(newComment);
+    });
   </script>
   <script data-section-id="header" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
 </body>
