@@ -471,7 +471,7 @@
   <script>
     window.onload = () => {
       const urlParam = new URLSearchParams(window.location.search);
-      const index = Number(urlParam.ger('i'));
+      const index = Number(urlParam.get('i'));
 
       const feed = JSON.parse(window.localStorage.getItem('feeds'))[index];
     };
