@@ -14,5 +14,7 @@ Unwaste is a web-based platform that will help farmers share  information about 
 - Keeps track of successful glenaing events, reduced waste, production for the unfortunates, 
   the number of participants and assisted food banks 
  
+ ## Technologies used 
+ 
  [Live Preview](https://oaxp.github.io/Unwaste/)
 <hr>
