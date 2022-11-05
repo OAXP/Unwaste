@@ -287,7 +287,7 @@
             </span>
           </div>
           <div class="global-stats-stat1">
-            <h1 class="global-stats-text05">369</h1>
+            <h1 class="global-stats-text05" id="nb-saved">369</h1>
             <span class="global-stats-text06">Produce saved</span>
             <span class="global-stats-text07">
               to benefit the unfortunate and the poor
@@ -295,7 +295,7 @@
           </div>
           <div class="global-stats-stat2">
             <h1 class="global-stats-text08">
-              <span>50</span>
+              <span id="nb-participant">50</span>
               <span>+</span>
             </h1>
             <span class="global-stats-text11">Participants</span>
@@ -366,89 +366,14 @@
     <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
     <script>
       window.onload = () => {
-        const runAllScripts = () => {
-          initializeAllSliders();
-        };
+        const nbParticipants = document.getElementById('nb-participant');
+        const nbSaved = document.getElementById('nb-saved');
 
-        const listenForUrlChanges = () => {
-          let url = location.href;
-          document.body.addEventListener(
-            "click",
-            () => {
-              requestAnimationFrame(() => {
-                if (url !== location.href) {
-                  runAllScripts();
-                  url = location.href;
-                }
-              });
-            },
-            true
-          );
-        };
+        const saved = 150 + JSON.parse(localStorage.getItem("feeds")).length * Math.floor(Math.random() * 12) + 1;
 
-        const initializeAllSliders = () => {
-          const allSliders = document.querySelectorAll('[data-type="slider"]');
-          allSliders.forEach((slider) => {
-            initializeSlider(slider);
-          });
-        };
+        nbSaved.innerText = saved.toString();
 
-        const initializeSlider = (slider) => {
-          const slides = slider.querySelectorAll('[data-type="slide"]');
-          const middle = Math.ceil(slides.length / 2);
-          let currentSlide = middle;
-
-          const nextSlideBtns = document.querySelectorAll(
-            '[data-action="nextSlide"]'
-          );
-          const previousSlideBtns = document.querySelectorAll(
-            '[data-action="previousSlide"]'
-          );
-
-          const changeSlide = (slideIndex, action) => {
-            currentSlide = slideIndex;
-
-            switch (action) {
-              case "next":
-                slideIndex === slides.length
-                  ? (currentSlide = 1)
-                  : currentSlide++;
-                break;
-              case "previous":
-                slideIndex === 1
-                  ? (currentSlide = slides.length)
-                  : currentSlide--;
-            }
-
-            const slide = slides[0];
-            if (!slide) {
-              console.error("No slides present");
-              return;
-            }
-            const style = window.getComputedStyle(slide);
-            slideWidth =
-              parseInt(style.width) +
-              parseInt(style.marginLeft) +
-              parseInt(style.marginRight);
-            const transformValue = -slideWidth * (currentSlide - middle);
-
-            slider.style.transform = `translateX(${transformValue}px)`;
-          };
-
-          previousSlideBtns.forEach((btn) => {
-            btn.addEventListener("click", () =>
-              changeSlide(currentSlide, "previous")
-            );
-          });
-
-          nextSlideBtns.forEach((btn) => {
-            btn.addEventListener("click", () =>
-              changeSlide(currentSlide, "next")
-            );
-          });
-        };
-
-        runAllScripts();
+        nbParticipants.innerText = window.localStorage.getItem("participants");
       };
     </script>
     <script

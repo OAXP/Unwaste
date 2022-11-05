@@ -310,7 +310,7 @@
                 <span>Produce saved</span>
                 <br />
               </span>
-              <h1 class="account-profile-text11">50 kg</h1>
+              <h1 class="account-profile-text11" id="nbProduce">50 kg</h1>
             </div>
             <div class="account-profile-stat2">
               <div class="account-profile-container3">
@@ -321,7 +321,7 @@
                 </svg>
               </div>
               <span class="account-profile-text12">Events attended</span>
-              <h1 class="account-profile-text13">10</h1>
+              <h1 class="account-profile-text13" id="events-attended">10</h1>
             </div>
             <div class="account-profile-stat3">
               <svg viewBox="0 0 1024 1024" class="account-profile-icon6">
@@ -389,89 +389,17 @@
     <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
     <script>
       window.onload = () => {
-        const runAllScripts = () => {
-          initializeAllSliders();
-        };
+        const nbEvents = document.getElementById('events-attended');
+        const nbProduce = document.getElementById('nbProduce');
 
-        const listenForUrlChanges = () => {
-          let url = location.href;
-          document.body.addEventListener(
-            "click",
-            () => {
-              requestAnimationFrame(() => {
-                if (url !== location.href) {
-                  runAllScripts();
-                  url = location.href;
-                }
-              });
-            },
-            true
-          );
-        };
+        let num = 10 + (Number(window.localStorage.getItem('participants')) - 20);
 
-        const initializeAllSliders = () => {
-          const allSliders = document.querySelectorAll('[data-type="slider"]');
-          allSliders.forEach((slider) => {
-            initializeSlider(slider);
-          });
-        };
+        nbEvents.innerText = num;
 
-        const initializeSlider = (slider) => {
-          const slides = slider.querySelectorAll('[data-type="slide"]');
-          const middle = Math.ceil(slides.length / 2);
-          let currentSlide = middle;
+        num = 50 + (num - 10)*Math.floor(Math.random() * 11) + 1;
 
-          const nextSlideBtns = document.querySelectorAll(
-            '[data-action="nextSlide"]'
-          );
-          const previousSlideBtns = document.querySelectorAll(
-            '[data-action="previousSlide"]'
-          );
+        nbProduce.innerText = `${num} KG`;
 
-          const changeSlide = (slideIndex, action) => {
-            currentSlide = slideIndex;
-
-            switch (action) {
-              case "next":
-                slideIndex === slides.length
-                  ? (currentSlide = 1)
-                  : currentSlide++;
-                break;
-              case "previous":
-                slideIndex === 1
-                  ? (currentSlide = slides.length)
-                  : currentSlide--;
-            }
-
-            const slide = slides[0];
-            if (!slide) {
-              console.error("No slides present");
-              return;
-            }
-            const style = window.getComputedStyle(slide);
-            slideWidth =
-              parseInt(style.width) +
-              parseInt(style.marginLeft) +
-              parseInt(style.marginRight);
-            const transformValue = -slideWidth * (currentSlide - middle);
-
-            slider.style.transform = `translateX(${transformValue}px)`;
-          };
-
-          previousSlideBtns.forEach((btn) => {
-            btn.addEventListener("click", () =>
-              changeSlide(currentSlide, "previous")
-            );
-          });
-
-          nextSlideBtns.forEach((btn) => {
-            btn.addEventListener("click", () =>
-              changeSlide(currentSlide, "next")
-            );
-          });
-        };
-
-        runAllScripts();
       };
     </script>
     <script

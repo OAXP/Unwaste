@@ -194,7 +194,8 @@
           description: "Volunteer-driven Gleaning Network in Montreal that coordinates with local farmers, thousands of volunteers, and food-providing agencies.",
           time: "2 DAYS AGO",
           link: "account-profile.html",
-          urgent: true
+          urgent: true,
+          request: false
         },
         {
           author_name: "JOHN DOE",
@@ -203,11 +204,13 @@
           description: "Montreal Gleaning Network is stronger than ever, saving over ten million pounds of fresh produce for hungry people last year, alone! We are one. ",
           time: "3 DAYS AGO",
           link: "account-profile-john.html",
-          urgent: false
+          urgent: false,
+          request: false
         },
       ];
       window.localStorage.setItem("comments", JSON.stringify(comments));
       window.localStorage.setItem("feeds", JSON.stringify(feeds));
+      window.localStorage.setItem("participants", 20);
     };
   </script>
   <script data-section-id="header" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
