@@ -627,7 +627,7 @@
   transition: 0.3s;
   align-items: flex-start;
 }
-.feed-post-request-btn:hover {
+.feed-post-request-btn:hover, .requested {
   fill: var(--dl-color-scheme-limegreen);
   color: var(--dl-color-scheme-limegreen);
 }
