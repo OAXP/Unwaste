@@ -31,7 +31,7 @@
 }
 .login-banner {
   width: 30vw;
-  height: 70vh;
+  height: auto;
   display: flex;
   opacity: 1;
   padding: var(--dl-space-space-threeunits);
@@ -50,7 +50,7 @@
 }
 .login-form {
   width: 20vw;
-  height: 45vh;
+  height: auto;
   position: relative;
   align-self: center;
 }
