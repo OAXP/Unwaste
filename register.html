@@ -87,9 +87,9 @@
               />
               <label>profile type</label>
               <select required="" id="profile-type" class="register-select">
-                <option value="gleanerAccont">Gleaner</option>
-                <option value="farmerAccount">Farmer</option>
-                <option value="foodBankAccount">Food Bank</option>
+                <option value="0">Gleaner</option>
+                <option value="1">Farmer</option>
+                <option value="2">Food Bank</option>
               </select>
               <label id="km-label" for="km-input">
                 Distance radius -&nbsp;
@@ -121,89 +121,25 @@
     <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
     <script>
       window.onload = () => {
-        const runAllScripts = () => {
-          initializeAllSliders();
-        };
-
-        const listenForUrlChanges = () => {
-          let url = location.href;
-          document.body.addEventListener(
-            "click",
-            () => {
-              requestAnimationFrame(() => {
-                if (url !== location.href) {
-                  runAllScripts();
-                  url = location.href;
-                }
-              });
-            },
-            true
-          );
-        };
-
-        const initializeAllSliders = () => {
-          const allSliders = document.querySelectorAll('[data-type="slider"]');
-          allSliders.forEach((slider) => {
-            initializeSlider(slider);
-          });
-        };
-
-        const initializeSlider = (slider) => {
-          const slides = slider.querySelectorAll('[data-type="slide"]');
-          const middle = Math.ceil(slides.length / 2);
-          let currentSlide = middle;
-
-          const nextSlideBtns = document.querySelectorAll(
-            '[data-action="nextSlide"]'
-          );
-          const previousSlideBtns = document.querySelectorAll(
-            '[data-action="previousSlide"]'
-          );
-
-          const changeSlide = (slideIndex, action) => {
-            currentSlide = slideIndex;
-
-            switch (action) {
-              case "next":
-                slideIndex === slides.length
-                  ? (currentSlide = 1)
-                  : currentSlide++;
-                break;
-              case "previous":
-                slideIndex === 1
-                  ? (currentSlide = slides.length)
-                  : currentSlide--;
-            }
-
-            const slide = slides[0];
-            if (!slide) {
-              console.error("No slides present");
-              return;
-            }
-            const style = window.getComputedStyle(slide);
-            slideWidth =
-              parseInt(style.width) +
-              parseInt(style.marginLeft) +
-              parseInt(style.marginRight);
-            const transformValue = -slideWidth * (currentSlide - middle);
-
-            slider.style.transform = `translateX(${transformValue}px)`;
-          };
-
-          previousSlideBtns.forEach((btn) => {
-            btn.addEventListener("click", () =>
-              changeSlide(currentSlide, "previous")
-            );
-          });
-
-          nextSlideBtns.forEach((btn) => {
-            btn.addEventListener("click", () =>
-              changeSlide(currentSlide, "next")
-            );
-          });
-        };
-
-        runAllScripts();
+        const profile = document.getElementById('profile-type');
+		const kmInput = document.getElementById('km-input');
+		const kmRange = document.getElementById('km-range');
+		
+        profile.addEventListener('change', (e) => {
+          if(e.target.value === '1') {
+            document.getElementById('km-label').hidden = true;
+            kmRange.hidden = true;
+            kmInput.hidden = true;
+          } else {
+			document.getElementById('km-label').hidden = false;
+            kmRange.hidden = false;
+            kmInput.hidden = false;
+		  }
+        });
+		
+		kmInput.addEventListener('input', (e) => {
+			kmRange.innerText = `${e.target.value} KM`;
+		})
       };
     </script>
     <script
