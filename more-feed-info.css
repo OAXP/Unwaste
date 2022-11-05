@@ -925,3 +925,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
+
+#comment {
+  width: 100%;
+}
