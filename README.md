@@ -14,6 +14,11 @@ Unwaste is a web-based platform that will help farmers share  information about 
 - Keeps track of successful glenaing events, reduced waste, production for the unfortunates, participants and assisted food banks 
  
  ## Technologies used 
- 
+- Google Maps API
+- HTML
+- CSS
+- JavaScript
+- [VS Code] - IDE
 
+[VS Code]: <https://code.visualstudio.com/>
 <hr>
