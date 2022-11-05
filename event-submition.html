@@ -314,18 +314,18 @@
                 class="event-submition-textinput2 input" />
             </div>
             <div class="event-submition-container07">
-              <input type="text" required placeholder="Location &amp; Contact Info"
+              <input id="EventContactCreation" type="text" required placeholder="Location &amp; Contact Info"
                 class="event-submition-textinput3 input" />
             </div>
             <div class="event-submition-container08">
-              <input type="text" required placeholder="Rules and Legal Information"
+              <input id="EventRulesCreation" type="text" required placeholder="Rules and Legal Information"
                 class="event-submition-textinput4 input" />
             </div>
             <div class="event-submition-container09">
-              <input type="text" required placeholder="Availabilities" class="event-submition-textinput5 input" />
+              <input id="EventAvailability" type="text" required placeholder="Availabilities" class="event-submition-textinput5 input" />
             </div>
             <div class="event-submition-container10">
-              <input type="text" required placeholder="Capacity" class="event-submition-textinput6 input" />
+              <input id="EventCapacityCreation" type="text" required placeholder="Capacity" class="event-submition-textinput6 input" />
             </div>
             <div class="event-submition-container11">
               <textarea id="EventDescriptionCreation" required placeholder="Description..."
@@ -369,10 +369,15 @@
         author_name: document.getElementById("EventNameCreation").value,
         author_img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&ixlib=rb-1.2.1&w=300",
         title: document.getElementById("EventTitleCreation").value,
+        capacity: document.getElementById("EventCapacityCreation").value,
         description: document.getElementById("EventDescriptionCreation").value,
         time: "Today",
+        date: document.getElementById("EventTimeCreation").value,
+        availability: document.getElementById("EventAvailability").value,
         link: "account-profile.html",
         urgent: document.getElementById("EventUrgentCreation").value,
+        contact : document.getElementById("EventContactCreation").value,
+        rules: document.getElementById("EventRulesCreation").value,
         request: false
       };
 

@@ -112,7 +112,6 @@
       line-height: 1.5;
       color: var(--dl-color-scheme-darkblue);
       background-color: var(--dl-color-scheme-lightgrey);
-
     }
   </style>
   <style data-section-id='dropdown'>
@@ -293,14 +292,14 @@
           </div>
         </div>
       </header>
-      <div class="more-feed-info-container01">
+      <div id="EventPage" class="more-feed-info-container01">
         <div class="more-feed-info-container02">
           <svg viewBox="0 0 1024 1024" class="more-feed-info-icon">
             <path
               d="M512 234q-44 0-75 32t-31 76 31 75 75 31 75-31 31-75-31-76-75-32zM238 438q0-66 62-96-62-30-62-96 0-44 32-76t76-32q30 0 60 20v-8q0-44 31-76t75-32 75 32 31 76v8q32-20 60-20 44 0 76 32t32 76q0 66-62 96 62 30 62 96 0 44-32 75t-76 31q-34 0-60-18v8q0 44-31 75t-75 31-75-31-31-75v-8q-28 18-60 18-44 0-76-31t-32-75zM512 938q-160 0-272-113t-112-271q160 0 272 113t112 271zM512 938q0-158 112-271t272-113q0 158-112 271t-272 113z">
             </path>
           </svg>
-          <h1>La ferme d'André</h1>
+          <h1></h1>
           <svg viewBox="0 0 1024 1024" class="more-feed-info-icon2">
             <path
               d="M512 234q-44 0-75 32t-31 76 31 75 75 31 75-31 31-75-31-76-75-32zM238 438q0-66 62-96-62-30-62-96 0-44 32-76t76-32q30 0 60 20v-8q0-44 31-76t75-32 75 32 31 76v8q32-20 60-20 44 0 76 32t32 76q0 66-62 96 62 30 62 96 0 44-32 75t-76 31q-34 0-60-18v8q0 44-31 75t-75 31-75-31-31-75v-8q-28 18-60 18-44 0-76-31t-32-75zM512 938q-160 0-272-113t-112-271q160 0 272 113t112 271zM512 938q0-158 112-271t272-113q0 158-112 271t-272 113z">
@@ -311,44 +310,39 @@
           <div class="more-feed-info-container04">
             <h3 class="more-feed-info-text01">Time</h3>
             <span class="more-feed-info-text02">
-              <span>Start : 7 novembre 2022 - 10 am</span>
+              <span></span>
               <br />
-              <span>end : 9 novembre 2022 - 5 pm</span>
+              <span></span>
             </span>
           </div>
           <div class="more-feed-info-container05">
             <h3>Location &amp; Contact Info</h3>
             <p class="more-feed-info-text07">
-              <span>
-                Montreal Convention Centre 1001 Pl. Jean-Paul-Riopelle · (514)
-                871-8122
-              </span>
+              <span></span>
+              <br />
               <span></span>
             </p>
           </div>
           <div class="more-feed-info-container06">
             <h3>Rules and Legal Information</h3>
-            <p class="more-feed-info-text11">In accordance to the food product act of Quebec</p>
+            <p class="more-feed-info-text11"></p>
           </div>
           <div class="more-feed-info-container07">
             <h3>Availabilities</h3>
             <p class="more-feed-info-text13">
               <span>
-                7 novembre 2022 - 11 am to 12 pm
               </span>
-              <br/>
-              <span> 7 novembre 2022 - 4 pm to 12 pm</span>
-              <br/>
-              <span> 9 novembre 2022 - 2 pm to 4 pm</span>
-             
+              <br />
+              <span></span>
+              <br />
+              <span></span>
             </p>
           </div>
           <div class="more-feed-info-container08">
             <h3>Capacity</h3>
             <p class="more-feed-info-text17">
-              <span>
-                10 people
-              </span>
+              <span></span>
+              <br />
               <span></span>
             </p>
           </div>
@@ -358,10 +352,8 @@
               <br />
             </h3>
             <p class="more-feed-info-text23">
-              <span>
-                Volunteer-driven Gleaning Network in Montreal that coordinates with local farmers, thousands of
-                volunteers, and food-providing agencies.
-              </span>
+              <span></span>
+              <br />
               <span></span>
             </p>
           </div>
@@ -474,6 +466,74 @@
       const index = Number(urlParam.get('i'));
 
       const feed = JSON.parse(window.localStorage.getItem('feeds'))[index];
+
+      const eventPage = document.getElementById("EventPage");
+
+
+      eventPage.innerHTML =
+        ` 
+      <div class="more-feed-info-container02">
+          <svg viewBox="0 0 1024 1024" class="more-feed-info-icon">
+            <path
+              d="M512 234q-44 0-75 32t-31 76 31 75 75 31 75-31 31-75-31-76-75-32zM238 438q0-66 62-96-62-30-62-96 0-44 32-76t76-32q30 0 60 20v-8q0-44 31-76t75-32 75 32 31 76v8q32-20 60-20 44 0 76 32t32 76q0 66-62 96 62 30 62 96 0 44-32 75t-76 31q-34 0-60-18v8q0 44-31 75t-75 31-75-31-31-75v-8q-28 18-60 18-44 0-76-31t-32-75zM512 938q-160 0-272-113t-112-271q160 0 272 113t112 271zM512 938q0-158 112-271t272-113q0 158-112 271t-272 113z">
+            </path>
+          </svg>
+          <h1>${feed.title}</h1>
+          <svg viewBox="0 0 1024 1024" class="more-feed-info-icon2">
+            <path
+              d="M512 234q-44 0-75 32t-31 76 31 75 75 31 75-31 31-75-31-76-75-32zM238 438q0-66 62-96-62-30-62-96 0-44 32-76t76-32q30 0 60 20v-8q0-44 31-76t75-32 75 32 31 76v8q32-20 60-20 44 0 76 32t32 76q0 66-62 96 62 30 62 96 0 44-32 75t-76 31q-34 0-60-18v8q0 44-31 75t-75 31-75-31-31-75v-8q-28 18-60 18-44 0-76-31t-32-75zM512 938q-160 0-272-113t-112-271q160 0 272 113t112 271zM512 938q0-158 112-271t272-113q0 158-112 271t-272 113z">
+            </path>
+          </svg>
+        </div>
+        <div class="more-feed-info-container03">
+          <div class="more-feed-info-container04">
+            <h3 class="more-feed-info-text01">Time</h3>
+            <span class="more-feed-info-text02">
+              <span>${feed.date}</span>
+            </span>
+          </div>
+          <div class="more-feed-info-container05">
+            <h3>Location &amp; Contact Info</h3>
+            <p class="more-feed-info-text07">
+              <span>
+                ${feed.contact}
+              </span>
+              <span></span>
+            </p>
+          </div>
+          <div class="more-feed-info-container06">
+            <h3>Rules and Legal Information</h3>
+            <p class="more-feed-info-text11">${feed.rules}</p>
+          </div>
+          <div class="more-feed-info-container07">
+            <h3>Availabilities</h3>
+            <p class="more-feed-info-text13">
+              ${feed.availability}
+            </p>
+          </div>
+          <div class="more-feed-info-container08">
+            <h3>Capacity</h3>
+            <p class="more-feed-info-text17">
+              <span>
+                ${feed.capacity}
+              </span>
+              <span></span>
+            </p>
+          </div>
+          <div class="more-feed-info-container09">
+            <h3>
+              <span>Description</span>
+              <br />
+            </h3>
+            <p class="more-feed-info-text23">
+              <span>
+                ${feed.description}
+              </span>
+              <span></span>
+            </p>
+          </div>
+        </div>
+      `;
     };
   </script>
   <script data-section-id="header" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
