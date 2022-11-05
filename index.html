@@ -1,137 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Unwaste</title>
-    <meta property="og:title" content="Unwaste" />
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: IBM Plex Sans Condensed;
-        font-size: 16px;
-      }
+<head>
+  <title>Unwaste</title>
+  <meta property="og:title" content="Unwaste" />
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: normal;
-        line-height: 1.5;
-        color: var(--dl-color-scheme-darkblue);
-        background-color: var(--dl-color-scheme-lightgrey);
+  <style data-tag="reset-style-sheet">
+    html {
+      line-height: 1.15;
+    }
 
-      }
-    </style>
-	<style data-section-id='dropdown'>[data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
-    display: flex; 
-  }
+    body {
+      margin: 0;
+    }
 
-  [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
-    transform: rotate(90deg);
-  }</style>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div>
-      <link href="./portal.css" rel="stylesheet" />
+    * {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+    }
 
-      <div class="portal-container">
-        <div class="portal-container1">
-          <img
-            alt="image"
-            src="https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1"
-            class="portal-image"
-          />
-          <div class="portal-banner">
-            <h1 class="portal-text">UNwAste</h1>
-            <svg viewBox="0 0 1024 1024" class="portal-icon">
-              <path
-                d="M853.333 469.333c0-209.067-149.291-388.267-354.987-425.941l-7.68-1.451-7.68 1.408c-205.696 37.717-354.987 216.917-354.987 425.984 0 196.992 132.608 367.36 320 417.92v51.413c0 23.595 19.115 42.667 42.667 42.667s42.667-19.072 42.667-42.667v-51.413c187.392-50.56 320-220.928 320-417.92zM533.333 797.867v-127.701l185.771-185.771c8.32-8.32 8.32-21.845 0-30.165s-21.845-8.32-30.165 0l-155.605 155.605v-153.003l100.437-100.437c8.32-8.32 8.32-21.845 0-30.165s-21.845-8.32-30.165 0l-70.272 70.272v-140.501c0-23.595-19.115-42.667-42.667-42.667s-42.667 19.072-42.667 42.667v140.501l-70.229-70.272c-8.32-8.32-21.845-8.32-30.165 0s-8.32 21.845 0 30.165l100.437 100.437v153.003l-155.563-155.563c-8.32-8.32-21.845-8.32-30.165 0s-8.32 21.845 0 30.165l185.771 185.771v127.659c-138.624-47.616-234.752-178.304-234.752-328.533 0-165.291 116.181-307.243 277.333-340.523 161.152 33.28 277.333 175.232 277.333 340.523 0 150.229-96.128 280.917-234.667 328.533z"
-              ></path>
-            </svg>
-            <span class="portal-text01">
-              <span>
-                In collaboration with earth day canada, this website was created
-                as a means to reduce food waste by providing farmers, food banks
-                and volunteers a platform to easily organize gleaning events
-              </span>
-              <br />
+    p,
+    li,
+    ul,
+    pre,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    blockquote,
+    figcaption {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    button:-moz-focus,
+    [type="button"]:-moz-focus,
+    [type="reset"]:-moz-focus,
+    [type="submit"]:-moz-focus {
+      outline: 1px dotted ButtonText;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    input {
+      padding: 2px 4px;
+    }
+
+    img {
+      display: block;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+  <style data-tag="default-style-sheet">
+    html {
+      font-family: IBM Plex Sans Condensed;
+      font-size: 16px;
+    }
+
+    body {
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: normal;
+      line-height: 1.5;
+      color: var(--dl-color-scheme-darkblue);
+      background-color: var(--dl-color-scheme-lightgrey);
+
+    }
+  </style>
+  <style data-section-id='dropdown'>
+    [data-thq="thq-dropdown"]:hover>[data-thq="thq-dropdown-list"] {
+      display: flex;
+    }
+
+    [data-thq="thq-dropdown"]:hover>div [data-thq="thq-dropdown-arrow"] {
+      transform: rotate(90deg);
+    }
+  </style>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div>
+    <link href="./portal.css" rel="stylesheet" />
+
+    <div class="portal-container">
+      <div class="portal-container1">
+        <img alt="image"
+          src="https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1"
+          class="portal-image" />
+        <div class="portal-banner">
+          <h1 class="portal-text">UNwAste</h1>
+          <svg viewBox="0 0 1024 1024" class="portal-icon">
+            <path
+              d="M853.333 469.333c0-209.067-149.291-388.267-354.987-425.941l-7.68-1.451-7.68 1.408c-205.696 37.717-354.987 216.917-354.987 425.984 0 196.992 132.608 367.36 320 417.92v51.413c0 23.595 19.115 42.667 42.667 42.667s42.667-19.072 42.667-42.667v-51.413c187.392-50.56 320-220.928 320-417.92zM533.333 797.867v-127.701l185.771-185.771c8.32-8.32 8.32-21.845 0-30.165s-21.845-8.32-30.165 0l-155.605 155.605v-153.003l100.437-100.437c8.32-8.32 8.32-21.845 0-30.165s-21.845-8.32-30.165 0l-70.272 70.272v-140.501c0-23.595-19.115-42.667-42.667-42.667s-42.667 19.072-42.667 42.667v140.501l-70.229-70.272c-8.32-8.32-21.845-8.32-30.165 0s-8.32 21.845 0 30.165l100.437 100.437v153.003l-155.563-155.563c-8.32-8.32-21.845-8.32-30.165 0s-8.32 21.845 0 30.165l185.771 185.771v127.659c-138.624-47.616-234.752-178.304-234.752-328.533 0-165.291 116.181-307.243 277.333-340.523 161.152 33.28 277.333 175.232 277.333 340.523 0 150.229-96.128 280.917-234.667 328.533z">
+            </path>
+          </svg>
+          <span class="portal-text01">
+            <span>
+              In collaboration with earth day canada, this website was created
+              as a means to reduce food waste by providing farmers, food banks
+              and volunteers a platform to easily organize gleaning events
             </span>
-            <div class="portal-container2">
-              <a
-                href="register.html"
-                id="login_button"
-                class="portal-navlink button"
-              >
-                <span>
-                  <span class="portal-text05">Register</span>
-                  <br />
-                </span>
-              </a>
-              <a
-                href="login.html"
-                id="register_button"
-                class="portal-navlink1 button"
-              >
-                <span>
-                  <span class="portal-text08">Login</span>
-                  <br />
-                </span>
-              </a>
-            </div>
+            <br />
+          </span>
+          <div class="portal-container2">
+            <a href="register.html" id="login_button" class="portal-navlink button">
+              <span>
+                <span class="portal-text05">Register</span>
+                <br />
+              </span>
+            </a>
+            <a href="login.html" id="register_button" class="portal-navlink1 button">
+              <span>
+                <span class="portal-text08">Login</span>
+                <br />
+              </span>
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
-    <script>
-      window.onload = () => {
-		const comments = [
-			{
-				author: "DANE DOE",
-				content: "Really energetic and innovative organization that is truly providing a resource to farmers as well as to communities by increasing access to fresh and local food."
-			},
-			{
-				author: "RAJA DOE",
-				content: "Nice ! Haha"
-			},
-		];
-		
-		const feeds = [
-			{
-				author_name: "JANE DOE",
-				author_img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&ixlib=rb-1.2.1&w=300",
-				title: "La ferme d'André",
-				description: "Volunteer-driven Gleaning Network in Montreal that coordinates with local farmers, thousands of volunteers, and food-providing agencies.",
-				time: "2 DAYS AGO",
-				link: "account-profile.html",
-				urgent: true
-			},
-			{
-				author_name: "JOHN DOE",
-				author_img: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fGd1eXxlbnwwfHx8fDE2Njc1NzgwNjQ&ixlib=rb-4.0.3&w=200",
-				title: "La ferme d'Alain",
-				description: "Montreal Gleaning Network is stronger than ever, saving over ten million pounds of fresh produce for hungry people last year, alone! We are one. ",
-				time: "3 DAYS AGO",
-				link: "account-profile-john.html",
-				urgent: false
-			},
-		];
-        window.localStorage.setItem("comments", JSON.stringify(comments));
-		window.localStorage.setItem("feeds", JSON.stringify(feeds));
-      };
-    </script>
-    <script
-      data-section-id="header"
-      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
-    ></script>
-  </body>
+  </div>
+  <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>s
+  <script>
+    window.onload = () => {
+      const comments = [
+        {
+          author: "DANE DOE",
+          content: "Really energetic and innovative organization that is truly providing a resource to farmers as well as to communities by increasing access to fresh and local food."
+        },
+        {
+          author: "RAJA DOE",
+          content: "Nice ! Haha"
+        },
+      ];
+
+      const feeds = [
+        {
+          author_name: "JANE DOE",
+          author_img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&ixlib=rb-1.2.1&w=300",
+          title: "La ferme d'André",
+          description: "Volunteer-driven Gleaning Network in Montreal that coordinates with local farmers, thousands of volunteers, and food-providing agencies.",
+          time: "2 DAYS AGO",
+          link: "account-profile.html",
+          urgent: true
+        },
+        {
+          author_name: "JOHN DOE",
+          author_img: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fGd1eXxlbnwwfHx8fDE2Njc1NzgwNjQ&ixlib=rb-4.0.3&w=200",
+          title: "La ferme d'Alain",
+          description: "Montreal Gleaning Network is stronger than ever, saving over ten million pounds of fresh produce for hungry people last year, alone! We are one. ",
+          time: "3 DAYS AGO",
+          link: "account-profile-john.html",
+          urgent: false
+        },
+      ];
+      window.localStorage.setItem("comments", JSON.stringify(comments));
+      window.localStorage.setItem("feeds", JSON.stringify(feeds));
+    };
+  </script>
+  <script data-section-id="header" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+</body>
+
 </html>

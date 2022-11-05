@@ -1,438 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>EventSubmition - Unwaste</title>
-    <meta property="og:title" content="EventSubmition - Unwaste" />
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: IBM Plex Sans Condensed;
-        font-size: 16px;
-      }
+<head>
+  <title>EventSubmition - Unwaste</title>
+  <meta property="og:title" content="EventSubmition - Unwaste" />
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: normal;
-        line-height: 1.5;
-        color: var(--dl-color-scheme-darkblue);
-        background-color: var(--dl-color-scheme-lightgrey);
+  <style data-tag="reset-style-sheet">
+    html {
+      line-height: 1.15;
+    }
 
-      }
-    </style>
-	<style data-section-id='dropdown'>[data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
-    display: flex; 
-  }
+    body {
+      margin: 0;
+    }
 
-  [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
-    transform: rotate(90deg);
-  }</style>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div>
-      <link href="./event-submition.css" rel="stylesheet" />
+    * {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+    }
 
-      <div class="event-submition-container">
-        <header
-          data-role="Header"
-          class="header-header nav-bar header-root-class-name1"
-        >
-          <div class="header-container">
-            <svg viewBox="0 0 1088 1024" class="header-icon">
-              <path
-                d="M1024 960v-64h-64v-384h64v-64h-192v64h64v384h-192v-384h64v-64h-192v64h64v384h-192v-384h64v-64h-192v64h64v384h-192v-384h64v-64h-192v64h64v384h-64v64h-64v64h1088v-64h-64z"
-              ></path>
-              <path d="M512 0h64l512 320v64h-1088v-64l512-320z"></path></svg
-            ><svg viewBox="0 0 1097.142857142857 1024" class="header-icon03">
-              <path
-                d="M338.857 512c-59.429 1.714-113.143 27.429-151.429 73.143h-76.571c-57.143 0-110.857-27.429-110.857-90.857 0-46.286-1.714-201.714 70.857-201.714 12 0 71.429 48.571 148.571 48.571 26.286 0 51.429-4.571 76-13.143-1.714 12.571-2.857 25.143-2.857 37.714 0 52 16.571 103.429 46.286 146.286zM950.857 876c0 92.571-61.143 148-152.571 148h-499.429c-91.429 0-152.571-55.429-152.571-148 0-129.143 30.286-327.429 197.714-327.429 19.429 0 90.286 79.429 204.571 79.429s185.143-79.429 204.571-79.429c167.429 0 197.714 198.286 197.714 327.429zM365.714 146.286c0 80.571-65.714 146.286-146.286 146.286s-146.286-65.714-146.286-146.286 65.714-146.286 146.286-146.286 146.286 65.714 146.286 146.286zM768 365.714c0 121.143-98.286 219.429-219.429 219.429s-219.429-98.286-219.429-219.429 98.286-219.429 219.429-219.429 219.429 98.286 219.429 219.429zM1097.143 494.286c0 63.429-53.714 90.857-110.857 90.857h-76.571c-38.286-45.714-92-71.429-151.429-73.143 29.714-42.857 46.286-94.286 46.286-146.286 0-12.571-1.143-25.143-2.857-37.714 24.571 8.571 49.714 13.143 76 13.143 77.143 0 136.571-48.571 148.571-48.571 72.571 0 70.857 155.429 70.857 201.714zM1024 146.286c0 80.571-65.714 146.286-146.286 146.286s-146.286-65.714-146.286-146.286 65.714-146.286 146.286-146.286 146.286 65.714 146.286 146.286z"
-              ></path></svg
-            ><svg viewBox="0 0 1024 1024" class="header-icon05">
-              <path
-                d="M512 32l-512 512 96 96 96-96v416h256v-192h128v192h256v-416l96 96 96-96-512-512zM512 448c-35.346 0-64-28.654-64-64s28.654-64 64-64c35.346 0 64 28.654 64 64s-28.654 64-64 64z"
-              ></path>
-            </svg>
-          </div>
-          <div class="header-container1">
-            <div class="header-container2">
-              <div
-                data-thq="thq-dropdown"
-                class="header-thq-dropdown list-item"
-              >
-                <div
-                  data-thq="thq-dropdown-toggle"
-                  class="header-dropdown-toggle"
-                >
-                  <a href="delivery.html">
-                    <svg viewBox="0 0 1024 1024" class="header-icon07">
-                      <path
-                        d="M1024 576l-128-256h-192v-128c0-35.2-28.8-64-64-64h-576c-35.2 0-64 28.8-64 64v512l64 64h81.166c-10.898 18.832-17.166 40.678-17.166 64 0 70.692 57.308 128 128 128s128-57.308 128-128c0-23.322-6.268-45.168-17.166-64h354.334c-10.898 18.832-17.168 40.678-17.168 64 0 70.692 57.308 128 128 128s128-57.308 128-128c0-23.322-6.27-45.168-17.168-64h81.168v-192zM704 576v-192h132.668l96 192h-228.668z"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-                <ul data-thq="thq-dropdown-list" class="header-dropdown-list">
-                  <li data-thq="thq-dropdown" class="header-dropdown list-item">
-                    <a href="delivery.html">
-                      <div
-                        data-thq="thq-dropdown-toggle"
-                        class="header-dropdown-toggle01"
-                      >
-                        <span class="header-notification">
-                          <span>Delivery</span>
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="header-container3">
-              <div
-                data-thq="thq-dropdown"
-                class="header-thq-dropdown1 list-item"
-              >
-                <div
-                  data-thq="thq-dropdown-toggle"
-                  class="header-dropdown-toggle02"
-                >
-                  <a href="map.html">
-                    <svg
-                      viewBox="0 0 585.1428571428571 1024"
-                      class="header-icon09"
-                    >
-                      <path
-                        d="M438.857 365.714c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM585.143 365.714c0 34.857-4 70.857-18.857 102.286l-208 442.286c-12 25.143-38.286 40.571-65.714 40.571s-53.714-15.429-65.143-40.571l-208.571-442.286c-14.857-31.429-18.857-67.429-18.857-102.286 0-161.714 130.857-292.571 292.571-292.571s292.571 130.857 292.571 292.571z"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-                <ul data-thq="thq-dropdown-list" class="header-dropdown-list1">
-                  <li
-                    data-thq="thq-dropdown"
-                    class="header-dropdown1 list-item"
-                  >
-                    <a href="map.html">
-                      <div
-                        data-thq="thq-dropdown-toggle"
-                        class="header-dropdown-toggle03"
-                      >
-                        <span class="header-map">
-                          <span>map</span>
-                          <br />
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="header-container4">
-              <a href="feed.html" class="header-navlink4">
-                <svg viewBox="0 0 1024 1024" class="header-icon11 nav-bar-logo">
-                  <path
-                    d="M853.333 469.333c0-209.067-149.291-388.267-354.987-425.941l-7.68-1.451-7.68 1.408c-205.696 37.717-354.987 216.917-354.987 425.984 0 196.992 132.608 367.36 320 417.92v51.413c0 23.595 19.115 42.667 42.667 42.667s42.667-19.072 42.667-42.667v-51.413c187.392-50.56 320-220.928 320-417.92zM533.333 797.867v-127.701l185.771-185.771c8.32-8.32 8.32-21.845 0-30.165s-21.845-8.32-30.165 0l-155.605 155.605v-153.003l100.437-100.437c8.32-8.32 8.32-21.845 0-30.165s-21.845-8.32-30.165 0l-70.272 70.272v-140.501c0-23.595-19.115-42.667-42.667-42.667s-42.667 19.072-42.667 42.667v140.501l-70.229-70.272c-8.32-8.32-21.845-8.32-30.165 0s-8.32 21.845 0 30.165l100.437 100.437v153.003l-155.563-155.563c-8.32-8.32-21.845-8.32-30.165 0s-8.32 21.845 0 30.165l185.771 185.771v127.659c-138.624-47.616-234.752-178.304-234.752-328.533 0-165.291 116.181-307.243 277.333-340.523 161.152 33.28 277.333 175.232 277.333 340.523 0 150.229-96.128 280.917-234.667 328.533z"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-            <div class="header-container5">
-              <div
-                data-thq="thq-dropdown"
-                class="header-thq-dropdown2 list-item"
-              >
-                <div
-                  data-thq="thq-dropdown-toggle"
-                  class="header-dropdown-toggle04"
-                >
-                  <a href="global-stats.html">
-                    <svg
-                      viewBox="0 0 950.8571428571428 1024"
-                      class="header-icon13"
-                    >
-                      <path
-                        d="M261.714 504.571c-24-52.571-42.286-122.286-42.286-212h-146.286v54.857c0 56 76 133.714 188.571 157.143zM877.714 347.429v-54.857h-146.286c0 89.714-18.286 159.429-42.286 212 112.571-23.429 188.571-101.143 188.571-157.143zM950.857 274.286v73.143c0 108.571-131.429 228.571-309.714 237.143-22.857 29.143-44 46.286-54.286 54.286-30.286 27.429-38.286 56-38.286 92.571s18.286 73.143 73.143 73.143 109.714 36.571 109.714 91.429v36.571c0 10.286-8 18.286-18.286 18.286h-475.429c-10.286 0-18.286-8-18.286-18.286v-36.571c0-54.857 54.857-91.429 109.714-91.429s73.143-36.571 73.143-73.143-8-65.143-38.286-92.571c-10.286-8-31.429-25.143-54.286-54.286-178.286-8.571-309.714-128.571-309.714-237.143v-73.143c0-30.286 24.571-54.857 54.857-54.857h164.571v-54.857c0-50.286 41.143-91.429 91.429-91.429h329.143c50.286 0 91.429 41.143 91.429 91.429v54.857h164.571c30.286 0 54.857 24.571 54.857 54.857z"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-                <ul data-thq="thq-dropdown-list" class="header-dropdown-list2">
-                  <li
-                    data-thq="thq-dropdown"
-                    class="header-dropdown2 list-item"
-                  ></li>
-                  <li
-                    data-thq="thq-dropdown"
-                    class="header-dropdown3 list-item"
-                  >
-                    <div
-                      data-thq="thq-dropdown-toggle"
-                      class="header-dropdown-toggle05"
-                    >
-                      <span class="header-ranking"><span>Ranking</span></span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="header-container6">
-              <div
-                data-thq="thq-dropdown"
-                class="header-thq-dropdown3 list-item"
-              >
-                <a href="map.html">
-                  <div
-                    data-thq="thq-dropdown-toggle"
-                    class="header-dropdown-toggle06"
-                  >
-                    <svg
-                      viewBox="0 0 877.7142857142857 1024"
-                      class="header-icon15"
-                    >
-                      <path
-                        d="M877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857 438.857 196.571 438.857 438.857z"
-                      ></path></svg
-                    ><svg viewBox="0 0 1024 1024" class="header-icon17">
-                      <path
-                        d="M726 682v-42l-44-42v-112q0-70-33-122t-95-66v-20q0-18-12-31t-30-13-30 13-12 31v20q-62 14-95 66t-33 122v112l-44 42v42h428zM512 790q28 0 46-19t18-45h-128q0 26 18 45t46 19zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"
-                      ></path>
-                    </svg>
-                  </div>
+    p,
+    li,
+    ul,
+    pre,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    blockquote,
+    figcaption {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    button:-moz-focus,
+    [type="button"]:-moz-focus,
+    [type="reset"]:-moz-focus,
+    [type="submit"]:-moz-focus {
+      outline: 1px dotted ButtonText;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    input {
+      padding: 2px 4px;
+    }
+
+    img {
+      display: block;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+  <style data-tag="default-style-sheet">
+    html {
+      font-family: IBM Plex Sans Condensed;
+      font-size: 16px;
+    }
+
+    body {
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: normal;
+      line-height: 1.5;
+      color: var(--dl-color-scheme-darkblue);
+      background-color: var(--dl-color-scheme-lightgrey);
+
+    }
+  </style>
+  <style data-section-id='dropdown'>
+    [data-thq="thq-dropdown"]:hover>[data-thq="thq-dropdown-list"] {
+      display: flex;
+    }
+
+    [data-thq="thq-dropdown"]:hover>div [data-thq="thq-dropdown-arrow"] {
+      transform: rotate(90deg);
+    }
+  </style>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div>
+    <link href="./event-submition.css" rel="stylesheet" />
+    <div class="event-submition-container">
+      <header data-role="Header" class="header-header nav-bar header-root-class-name1">
+        <div class="header-container">
+          <svg viewBox="0 0 1088 1024" class="header-icon">
+            <path
+              d="M1024 960v-64h-64v-384h64v-64h-192v64h64v384h-192v-384h64v-64h-192v64h64v384h-192v-384h64v-64h-192v64h64v384h-192v-384h64v-64h-192v64h64v384h-64v64h-64v64h1088v-64h-64z">
+            </path>
+            <path d="M512 0h64l512 320v64h-1088v-64l512-320z"></path>
+          </svg><svg viewBox="0 0 1097.142857142857 1024" class="header-icon03">
+            <path
+              d="M338.857 512c-59.429 1.714-113.143 27.429-151.429 73.143h-76.571c-57.143 0-110.857-27.429-110.857-90.857 0-46.286-1.714-201.714 70.857-201.714 12 0 71.429 48.571 148.571 48.571 26.286 0 51.429-4.571 76-13.143-1.714 12.571-2.857 25.143-2.857 37.714 0 52 16.571 103.429 46.286 146.286zM950.857 876c0 92.571-61.143 148-152.571 148h-499.429c-91.429 0-152.571-55.429-152.571-148 0-129.143 30.286-327.429 197.714-327.429 19.429 0 90.286 79.429 204.571 79.429s185.143-79.429 204.571-79.429c167.429 0 197.714 198.286 197.714 327.429zM365.714 146.286c0 80.571-65.714 146.286-146.286 146.286s-146.286-65.714-146.286-146.286 65.714-146.286 146.286-146.286 146.286 65.714 146.286 146.286zM768 365.714c0 121.143-98.286 219.429-219.429 219.429s-219.429-98.286-219.429-219.429 98.286-219.429 219.429-219.429 219.429 98.286 219.429 219.429zM1097.143 494.286c0 63.429-53.714 90.857-110.857 90.857h-76.571c-38.286-45.714-92-71.429-151.429-73.143 29.714-42.857 46.286-94.286 46.286-146.286 0-12.571-1.143-25.143-2.857-37.714 24.571 8.571 49.714 13.143 76 13.143 77.143 0 136.571-48.571 148.571-48.571 72.571 0 70.857 155.429 70.857 201.714zM1024 146.286c0 80.571-65.714 146.286-146.286 146.286s-146.286-65.714-146.286-146.286 65.714-146.286 146.286-146.286 146.286 65.714 146.286 146.286z">
+            </path>
+          </svg><svg viewBox="0 0 1024 1024" class="header-icon05">
+            <path
+              d="M512 32l-512 512 96 96 96-96v416h256v-192h128v192h256v-416l96 96 96-96-512-512zM512 448c-35.346 0-64-28.654-64-64s28.654-64 64-64c35.346 0 64 28.654 64 64s-28.654 64-64 64z">
+            </path>
+          </svg>
+        </div>
+        <div class="header-container1">
+          <div class="header-container2">
+            <div data-thq="thq-dropdown" class="header-thq-dropdown list-item">
+              <div data-thq="thq-dropdown-toggle" class="header-dropdown-toggle">
+                <a href="delivery.html">
+                  <svg viewBox="0 0 1024 1024" class="header-icon07">
+                    <path
+                      d="M1024 576l-128-256h-192v-128c0-35.2-28.8-64-64-64h-576c-35.2 0-64 28.8-64 64v512l64 64h81.166c-10.898 18.832-17.166 40.678-17.166 64 0 70.692 57.308 128 128 128s128-57.308 128-128c0-23.322-6.268-45.168-17.166-64h354.334c-10.898 18.832-17.168 40.678-17.168 64 0 70.692 57.308 128 128 128s128-57.308 128-128c0-23.322-6.27-45.168-17.168-64h81.168v-192zM704 576v-192h132.668l96 192h-228.668z">
+                    </path>
+                  </svg>
                 </a>
-                <ul data-thq="thq-dropdown-list" class="header-dropdown-list3">
-                  <li
-                    data-thq="thq-dropdown"
-                    class="header-dropdown4 list-item"
-                  >
-                    <a href="map.html">
-                      <div
-                        data-thq="thq-dropdown-toggle"
-                        class="header-dropdown-toggle07"
-                      >
-                        <span class="header-delivery">
-                          <span>Notifications</span>
-                          <br />
-                          <br />
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-                  <li
-                    data-thq="thq-dropdown"
-                    class="header-dropdown5 list-item"
-                  ></li>
-                </ul>
               </div>
+              <ul data-thq="thq-dropdown-list" class="header-dropdown-list">
+                <li data-thq="thq-dropdown" class="header-dropdown list-item">
+                  <a href="delivery.html">
+                    <div data-thq="thq-dropdown-toggle" class="header-dropdown-toggle01">
+                      <span class="header-notification">
+                        <span>Delivery</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="header-container7">
-            <div data-thq="thq-dropdown" class="header-thq-dropdown4 list-item">
-              <div
-                data-thq="thq-dropdown-toggle"
-                class="header-dropdown-toggle08"
-              >
-                <svg viewBox="0 0 1024 1024" class="header-icon19">
-                  <path
-                    d="M341.333 298.667h554.667c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-554.667c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM341.333 554.667h554.667c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-554.667c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM341.333 810.667h554.667c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-554.667c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM170.667 256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667 19.115 42.667 42.667 42.667 42.667-19.115 42.667-42.667zM170.667 512c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667 19.115 42.667 42.667 42.667 42.667-19.115 42.667-42.667zM170.667 768c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667 19.115 42.667 42.667 42.667 42.667-19.115 42.667-42.667z"
-                  ></path>
-                </svg>
+          <div class="header-container3">
+            <div data-thq="thq-dropdown" class="header-thq-dropdown1 list-item">
+              <div data-thq="thq-dropdown-toggle" class="header-dropdown-toggle02">
+                <a href="map.html">
+                  <svg viewBox="0 0 585.1428571428571 1024" class="header-icon09">
+                    <path
+                      d="M438.857 365.714c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM585.143 365.714c0 34.857-4 70.857-18.857 102.286l-208 442.286c-12 25.143-38.286 40.571-65.714 40.571s-53.714-15.429-65.143-40.571l-208.571-442.286c-14.857-31.429-18.857-67.429-18.857-102.286 0-161.714 130.857-292.571 292.571-292.571s292.571 130.857 292.571 292.571z">
+                    </path>
+                  </svg>
+                </a>
               </div>
-              <ul data-thq="thq-dropdown-list" class="header-dropdown-list4">
-                <li data-thq="thq-dropdown" class="header-dropdown6 list-item">
-                  <div
-                    data-thq="thq-dropdown-toggle"
-                    class="header-dropdown-toggle09"
-                  >
-                    <a href="account-profile.html" class="header-profile">
-                      <span>Profile</span>
-                    </a>
-                  </div>
+              <ul data-thq="thq-dropdown-list" class="header-dropdown-list1">
+                <li data-thq="thq-dropdown" class="header-dropdown1 list-item">
+                  <a href="map.html">
+                    <div data-thq="thq-dropdown-toggle" class="header-dropdown-toggle03">
+                      <span class="header-map">
+                        <span>map</span>
+                        <br />
+                      </span>
+                    </div>
+                  </a>
                 </li>
-                <li data-thq="thq-dropdown" class="header-dropdown7 list-item">
-                  <div
-                    data-thq="thq-dropdown-toggle"
-                    class="header-dropdown-toggle10"
-                  >
-                    <a href="login.html" class="header-sign-out">
-                      <span>Sign out</span>
-                      <br />
-                    </a>
+              </ul>
+            </div>
+          </div>
+          <div class="header-container4">
+            <a href="feed.html" class="header-navlink4">
+              <svg viewBox="0 0 1024 1024" class="header-icon11 nav-bar-logo">
+                <path
+                  d="M853.333 469.333c0-209.067-149.291-388.267-354.987-425.941l-7.68-1.451-7.68 1.408c-205.696 37.717-354.987 216.917-354.987 425.984 0 196.992 132.608 367.36 320 417.92v51.413c0 23.595 19.115 42.667 42.667 42.667s42.667-19.072 42.667-42.667v-51.413c187.392-50.56 320-220.928 320-417.92zM533.333 797.867v-127.701l185.771-185.771c8.32-8.32 8.32-21.845 0-30.165s-21.845-8.32-30.165 0l-155.605 155.605v-153.003l100.437-100.437c8.32-8.32 8.32-21.845 0-30.165s-21.845-8.32-30.165 0l-70.272 70.272v-140.501c0-23.595-19.115-42.667-42.667-42.667s-42.667 19.072-42.667 42.667v140.501l-70.229-70.272c-8.32-8.32-21.845-8.32-30.165 0s-8.32 21.845 0 30.165l100.437 100.437v153.003l-155.563-155.563c-8.32-8.32-21.845-8.32-30.165 0s-8.32 21.845 0 30.165l185.771 185.771v127.659c-138.624-47.616-234.752-178.304-234.752-328.533 0-165.291 116.181-307.243 277.333-340.523 161.152 33.28 277.333 175.232 277.333 340.523 0 150.229-96.128 280.917-234.667 328.533z">
+                </path>
+              </svg>
+            </a>
+          </div>
+          <div class="header-container5">
+            <div data-thq="thq-dropdown" class="header-thq-dropdown2 list-item">
+              <div data-thq="thq-dropdown-toggle" class="header-dropdown-toggle04">
+                <a href="global-stats.html">
+                  <svg viewBox="0 0 950.8571428571428 1024" class="header-icon13">
+                    <path
+                      d="M261.714 504.571c-24-52.571-42.286-122.286-42.286-212h-146.286v54.857c0 56 76 133.714 188.571 157.143zM877.714 347.429v-54.857h-146.286c0 89.714-18.286 159.429-42.286 212 112.571-23.429 188.571-101.143 188.571-157.143zM950.857 274.286v73.143c0 108.571-131.429 228.571-309.714 237.143-22.857 29.143-44 46.286-54.286 54.286-30.286 27.429-38.286 56-38.286 92.571s18.286 73.143 73.143 73.143 109.714 36.571 109.714 91.429v36.571c0 10.286-8 18.286-18.286 18.286h-475.429c-10.286 0-18.286-8-18.286-18.286v-36.571c0-54.857 54.857-91.429 109.714-91.429s73.143-36.571 73.143-73.143-8-65.143-38.286-92.571c-10.286-8-31.429-25.143-54.286-54.286-178.286-8.571-309.714-128.571-309.714-237.143v-73.143c0-30.286 24.571-54.857 54.857-54.857h164.571v-54.857c0-50.286 41.143-91.429 91.429-91.429h329.143c50.286 0 91.429 41.143 91.429 91.429v54.857h164.571c30.286 0 54.857 24.571 54.857 54.857z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+              <ul data-thq="thq-dropdown-list" class="header-dropdown-list2">
+                <li data-thq="thq-dropdown" class="header-dropdown2 list-item"></li>
+                <li data-thq="thq-dropdown" class="header-dropdown3 list-item">
+                  <div data-thq="thq-dropdown-toggle" class="header-dropdown-toggle05">
+                    <span class="header-ranking"><span>Ranking</span></span>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
-        </header>
-        <div class="event-submition-container01">
-          <form class="event-submition-form">
-            <div class="event-submition-container02">
-              <h1>
-                <span>event creation</span>
-                <br />
-              </h1>
+          <div class="header-container6">
+            <div data-thq="thq-dropdown" class="header-thq-dropdown3 list-item">
+              <a href="map.html">
+                <div data-thq="thq-dropdown-toggle" class="header-dropdown-toggle06">
+                  <svg viewBox="0 0 877.7142857142857 1024" class="header-icon15">
+                    <path
+                      d="M877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857 438.857 196.571 438.857 438.857z">
+                    </path>
+                  </svg><svg viewBox="0 0 1024 1024" class="header-icon17">
+                    <path
+                      d="M726 682v-42l-44-42v-112q0-70-33-122t-95-66v-20q0-18-12-31t-30-13-30 13-12 31v20q-62 14-95 66t-33 122v112l-44 42v42h428zM512 790q28 0 46-19t18-45h-128q0 26 18 45t46 19zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z">
+                    </path>
+                  </svg>
+                </div>
+              </a>
+              <ul data-thq="thq-dropdown-list" class="header-dropdown-list3">
+                <li data-thq="thq-dropdown" class="header-dropdown4 list-item">
+                  <a href="map.html">
+                    <div data-thq="thq-dropdown-toggle" class="header-dropdown-toggle07">
+                      <span class="header-delivery">
+                        <span>Notifications</span>
+                        <br />
+                        <br />
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li data-thq="thq-dropdown" class="header-dropdown5 list-item"></li>
+              </ul>
             </div>
-            <div class="event-submition-container03">
-              <div class="event-submition-container04">
-                <input
-                  type="text"
-                  required=""
-                  placeholder="Time"
-                  class="event-submition-textinput input"
-                />
-              </div>
-              <div class="event-submition-container05">
-                <input
-                  type="text"
-                  required=""
-                  placeholder="Location &amp; Contact Info"
-                  class="event-submition-textinput1 input"
-                />
-              </div>
-              <div class="event-submition-container06">
-                <input
-                  type="text"
-                  required=""
-                  placeholder="Rules and Legal Information"
-                  class="event-submition-textinput2 input"
-                />
-              </div>
-              <div class="event-submition-container07">
-                <input
-                  type="text"
-                  required=""
-                  placeholder="Availabilities"
-                  class="event-submition-textinput3 input"
-                />
-              </div>
-              <div class="event-submition-container08">
-                <input
-                  type="text"
-                  required=""
-                  placeholder="Capacity"
-                  class="event-submition-textinput4 input"
-                />
-              </div>
-              <div class="event-submition-container09">
-                <textarea
-                  placeholder="Description..."
-                  class="event-submition-textarea textarea"
-                ></textarea>
-              </div>
+          </div>
+        </div>
+        <div class="header-container7">
+          <div data-thq="thq-dropdown" class="header-thq-dropdown4 list-item">
+            <div data-thq="thq-dropdown-toggle" class="header-dropdown-toggle08">
+              <svg viewBox="0 0 1024 1024" class="header-icon19">
+                <path
+                  d="M341.333 298.667h554.667c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-554.667c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM341.333 554.667h554.667c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-554.667c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM341.333 810.667h554.667c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-554.667c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM170.667 256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667 19.115 42.667 42.667 42.667 42.667-19.115 42.667-42.667zM170.667 512c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667 19.115 42.667 42.667 42.667 42.667-19.115 42.667-42.667zM170.667 768c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667 19.115 42.667 42.667 42.667 42.667-19.115 42.667-42.667z">
+                </path>
+              </svg>
+            </div>
+            <ul data-thq="thq-dropdown-list" class="header-dropdown-list4">
+              <li data-thq="thq-dropdown" class="header-dropdown6 list-item">
+                <div data-thq="thq-dropdown-toggle" class="header-dropdown-toggle09">
+                  <a href="account-profile.html" class="header-profile">
+                    <span>Profile</span>
+                  </a>
+                </div>
+              </li>
+              <li data-thq="thq-dropdown" class="header-dropdown7 list-item">
+                <div data-thq="thq-dropdown-toggle" class="header-dropdown-toggle10">
+                  <a href="login.html" class="header-sign-out">
+                    <span>Sign out</span>
+                    <br />
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="event-submition-container01">
+        <form id="EventCreation" action="feed.html" class="event-submition-form">
+          <div class="event-submition-container02">
+            <h1>
+              <span>event creation</span>
+              <br />
+            </h1>
+          </div>
+          <div class="event-submition-container03">
+            <div class="event-submition-container04">
+              <input id="EventTitleCreation" type="text" required placeholder="Title"
+                class="event-submition-textinput input" />
+            </div>
+            <div class="event-submition-container05">
+              <input id="EventNameCreation" type="text" required placeholder="Name"
+                class="event-submition-textinput1 input" />
+            </div>
+            <div class="event-submition-container06">
+              <input id="EventTimeCreation" type="date" required placeholder="Time"
+                class="event-submition-textinput2 input" />
+            </div>
+            <div class="event-submition-container07">
+              <input type="text" required placeholder="Location &amp; Contact Info"
+                class="event-submition-textinput3 input" />
+            </div>
+            <div class="event-submition-container08">
+              <input type="text" required placeholder="Rules and Legal Information"
+                class="event-submition-textinput4 input" />
+            </div>
+            <div class="event-submition-container09">
+              <input type="text" required placeholder="Availabilities" class="event-submition-textinput5 input" />
             </div>
             <div class="event-submition-container10">
-              <button type="submit" class="event-submition-button button">
-                <span>
-                  <span>Submit</span>
-                  <br />
-                </span>
-              </button>
+              <input type="text" required placeholder="Capacity" class="event-submition-textinput6 input" />
             </div>
-          </form>
-        </div>
+            <div class="event-submition-container11">
+              <textarea id="EventDescriptionCreation" required placeholder="Description..."
+                class="event-submition-textarea textarea"></textarea>
+            </div>
+            <div class="event-submition-container12">
+              <label class="event-submition-text3">
+                <span>Urgent</span>
+                <br />
+              </label>
+              <input id="EventUrgentCreation" type="checkbox" checked="true"  class="event-submition-checkbox" />
+            </div>
+          </div>
+          <div class="event-submition-container13">
+            <button type="submit" class="event-submition-button button">
+              <span>
+                <span>Submit</span>
+                <br />
+              </span>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
-    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
-    <script>
-      window.onload = () => {
-        const runAllScripts = () => {
-          initializeAllSliders();
-        };
+  </div>
 
-        const listenForUrlChanges = () => {
-          let url = location.href;
-          document.body.addEventListener(
-            "click",
-            () => {
-              requestAnimationFrame(() => {
-                if (url !== location.href) {
-                  runAllScripts();
-                  url = location.href;
-                }
-              });
-            },
-            true
-          );
-        };
+  <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+  <script>
+    window.onload = () => {
+      const form = document.getElementById("EventCreation");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        storeToFeed();
+        window.location.href = "feed.html";
+      });
+    function storeToFeed() { //Event Submit Function
 
-        const initializeAllSliders = () => {
-          const allSliders = document.querySelectorAll('[data-type="slider"]');
-          allSliders.forEach((slider) => {
-            initializeSlider(slider);
-          });
-        };
 
-        const initializeSlider = (slider) => {
-          const slides = slider.querySelectorAll('[data-type="slide"]');
-          const middle = Math.ceil(slides.length / 2);
-          let currentSlide = middle;
-
-          const nextSlideBtns = document.querySelectorAll(
-            '[data-action="nextSlide"]'
-          );
-          const previousSlideBtns = document.querySelectorAll(
-            '[data-action="previousSlide"]'
-          );
-
-          const changeSlide = (slideIndex, action) => {
-            currentSlide = slideIndex;
-
-            switch (action) {
-              case "next":
-                slideIndex === slides.length
-                  ? (currentSlide = 1)
-                  : currentSlide++;
-                break;
-              case "previous":
-                slideIndex === 1
-                  ? (currentSlide = slides.length)
-                  : currentSlide--;
-            }
-
-            const slide = slides[0];
-            if (!slide) {
-              console.error("No slides present");
-              return;
-            }
-            const style = window.getComputedStyle(slide);
-            slideWidth =
-              parseInt(style.width) +
-              parseInt(style.marginLeft) +
-              parseInt(style.marginRight);
-            const transformValue = -slideWidth * (currentSlide - middle);
-
-            slider.style.transform = `translateX(${transformValue}px)`;
-          };
-
-          previousSlideBtns.forEach((btn) => {
-            btn.addEventListener("click", () =>
-              changeSlide(currentSlide, "previous")
-            );
-          });
-
-          nextSlideBtns.forEach((btn) => {
-            btn.addEventListener("click", () =>
-              changeSlide(currentSlide, "next")
-            );
-          });
-        };
-
-        runAllScripts();
+      const feed =
+      {
+        author_name: document.getElementById("EventNameCreation").value,
+        author_img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&ixlib=rb-1.2.1&w=300",
+        title: document.getElementById("EventTitleCreation").value,
+        description: document.getElementById("EventDescriptionCreation").value,
+        time: "Today",
+        link: "account-profile.html",
+        urgent: document.getElementById("EventUrgentCreation").value
       };
-    </script>
-    <script
-      data-section-id="header"
-      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
-    ></script>
-  </body>
+
+      console.log(JSON.stringify(feed));
+      var feeds = JSON.parse(window.localStorage.getItem('feeds'));
+
+      feeds.push(feed);
+      localStorage.setItem("feeds", JSON.stringify(feeds));
+
+    };
+  };
+  </script>
+  <script data-section-id="header" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+</body>
+
 </html>
