@@ -15,5 +15,5 @@ Unwaste is a web-based platform that will help farmers share  information about 
  
  ## Technologies used 
  
- [Live Preview](https://oaxp.github.io/Unwaste/)
+
 <hr>
