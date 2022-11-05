@@ -293,7 +293,7 @@
         </div>
       </header>
       <div class="event-submition-container01">
-        <form action="feed.html" class="event-submition-form">
+        <form id="EventCreation" action="feed.html" class="event-submition-form">
           <div class="event-submition-container02">
             <h1>
               <span>event creation</span>
@@ -310,7 +310,7 @@
                 class="event-submition-textinput1 input" />
             </div>
             <div class="event-submition-container06">
-              <input id="EventTimeCreation" type="text" required placeholder="Time"
+              <input id="EventTimeCreation" type="date" required placeholder="Time"
                 class="event-submition-textinput2 input" />
             </div>
             <div class="event-submition-container07">
@@ -328,7 +328,7 @@
               <input type="text" required placeholder="Capacity" class="event-submition-textinput6 input" />
             </div>
             <div class="event-submition-container11">
-              <textarea id="EventDescriptionCreation" placeholder="Description..."
+              <textarea id="EventDescriptionCreation" required placeholder="Description..."
                 class="event-submition-textarea textarea"></textarea>
             </div>
             <div class="event-submition-container12">
@@ -336,11 +336,11 @@
                 <span>Urgent</span>
                 <br />
               </label>
-              <input id="EventUrgentCreation" type="checkbox" checked="true" class="event-submition-checkbox" />
+              <input id="EventUrgentCreation" type="checkbox" checked="true"  class="event-submition-checkbox" />
             </div>
           </div>
           <div class="event-submition-container13">
-            <button onclick="storeToFeed();" type="submit" class="event-submition-button button">
+            <button type="submit" class="event-submition-button button">
               <span>
                 <span>Submit</span>
                 <br />
@@ -355,92 +355,14 @@
   <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
   <script>
     window.onload = () => {
-
-      const runAllScripts = () => {
-        initializeAllSliders();
-      };
-
-      const listenForUrlChanges = () => {
-        let url = location.href;
-        document.body.addEventListener(
-          "click",
-          () => {
-            requestAnimationFrame(() => {
-              if (url !== location.href) {
-                runAllScripts();
-                url = location.href;
-              }
-            });
-          },
-          true
-        );
-      };
-
-      const initializeAllSliders = () => {
-        const allSliders = document.querySelectorAll('[data-type="slider"]');
-        allSliders.forEach((slider) => {
-          initializeSlider(slider);
-        });
-      };
-
-      const initializeSlider = (slider) => {
-        const slides = slider.querySelectorAll('[data-type="slide"]');
-        const middle = Math.ceil(slides.length / 2);
-        let currentSlide = middle;
-
-        const nextSlideBtns = document.querySelectorAll(
-          '[data-action="nextSlide"]'
-        );
-        const previousSlideBtns = document.querySelectorAll(
-          '[data-action="previousSlide"]'
-        );
-
-        const changeSlide = (slideIndex, action) => {
-          currentSlide = slideIndex;
-
-          switch (action) {
-            case "next":
-              slideIndex === slides.length
-                ? (currentSlide = 1)
-                : currentSlide++;
-              break;
-            case "previous":
-              slideIndex === 1
-                ? (currentSlide = slides.length)
-                : currentSlide--;
-          }
-
-          const slide = slides[0];
-          if (!slide) {
-            console.error("No slides present");
-            return;
-          }
-          const style = window.getComputedStyle(slide);
-          slideWidth =
-            parseInt(style.width) +
-            parseInt(style.marginLeft) +
-            parseInt(style.marginRight);
-          const transformValue = -slideWidth * (currentSlide - middle);
-
-          slider.style.transform = `translateX(${transformValue}px)`;
-        };
-
-        previousSlideBtns.forEach((btn) => {
-          btn.addEventListener("click", () =>
-            changeSlide(currentSlide, "previous")
-          );
-        });
-
-        nextSlideBtns.forEach((btn) => {
-          btn.addEventListener("click", () =>
-            changeSlide(currentSlide, "next")
-          );
-        });
-      };
-      runAllScripts();
-    };
-
+      const form = document.getElementById("EventCreation");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        storeToFeed();
+        window.location.href = "feed.html";
+      });
     function storeToFeed() { //Event Submit Function
+
 
       const feed =
       {
@@ -448,7 +370,7 @@
         author_img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&ixlib=rb-1.2.1&w=300",
         title: document.getElementById("EventTitleCreation").value,
         description: document.getElementById("EventDescriptionCreation").value,
-        time: document.getElementById("EventTimeCreation").value,
+        time: "Today",
         link: "account-profile.html",
         urgent: document.getElementById("EventUrgentCreation").value
       };
@@ -460,6 +382,7 @@
       localStorage.setItem("feeds", JSON.stringify(feeds));
 
     };
+  };
   </script>
   <script data-section-id="header" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
 </body>

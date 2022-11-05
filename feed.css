@@ -701,7 +701,7 @@
   align-items: flex-start;
 }
 
-.feed-post-request-btn:hover {
+.feed-post-request-btn:hover, .requested {
   fill: var(--dl-color-scheme-limegreen);
   color: var(--dl-color-scheme-limegreen);
 }
@@ -771,6 +771,10 @@
   color: #595959;
   font-size: 1.25rem;
   margin-bottom: var(--dl-space-space-twounits);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 2.8em;
 }
 
 @media(max-width: 991px) {
@@ -972,4 +976,7 @@
   border-radius: 2em;
   margin-bottom: var(--dl-space-space-fiveunits);
   flex-direction: column;
+  width: 57%;
+  margin-left: auto;
+  margin-right: auto;
 }
