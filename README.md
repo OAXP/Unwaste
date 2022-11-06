@@ -20,6 +20,12 @@ Unwaste is a web-based platform that will help farmers share  information about 
 - [Google Maps API]
 - [VS Code] - IDE
 
+# Authors
+- Anas Barcbouch
+- Rajakanth Kandasamy
+- Ryad Alla
+- Adlane Oussaada
+- Anh Pham
 [Google Maps API]: <https://developers.google.com/maps>
 [VS Code]: <https://code.visualstudio.com/>
 <hr>
