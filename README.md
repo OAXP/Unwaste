@@ -26,6 +26,7 @@ Unwaste is a web-based platform that will help farmers share  information about 
 - Ryad Alla
 - Adlane Oussaada
 - Anh Pham
+- Andy Tran
 
 
 [Google Maps API]: <https://developers.google.com/maps>
