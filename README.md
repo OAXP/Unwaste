@@ -20,7 +20,7 @@ Unwaste is a web-based platform that will help farmers share  information about 
 - [Google Maps API]
 - [VS Code] - IDE
 
-# Authors
+### Authors
 - Anas Barcbouch
 - Rajakanth Kandasamy
 - Ryad Alla
