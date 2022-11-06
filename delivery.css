@@ -564,6 +564,7 @@
 
 
 
+
 @media(max-width: 1600px) {
   .header-header {
     width: 80%;
@@ -619,6 +620,7 @@
 
 
 
+
 @media(max-width: 767px) {
   .social-bar-social-bar {
     padding-left: var(--dl-space-space-twounits);
@@ -643,7 +645,16 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.delivery-container1 {
+.delivery-container01 {
+  gap: 10%;
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delivery-container02 {
   width: 50%;
   height: 50%;
   display: flex;
@@ -657,7 +668,7 @@
   height: 100%;
   padding: 2em;
 }
-.delivery-container2 {
+.delivery-container03 {
   flex: 0 0 auto;
   width: auto;
   height: auto;
@@ -669,7 +680,7 @@
 .delivery-text {
   margin-bottom: 1em;
 }
-.delivery-container3 {
+.delivery-container04 {
   flex: 0 0 auto;
   width: auto;
   height: auto;
@@ -677,7 +688,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.delivery-container4 {
+.delivery-container05 {
   gap: 1em;
   flex: 0 0 auto;
   width: 100%;
@@ -697,7 +708,7 @@
   text-transform: capitalize;
   background-color: var(--dl-color-scheme-lightgrey);
 }
-.delivery-container5 {
+.delivery-container06 {
   gap: 1em;
   flex: 0 0 auto;
   width: 100%;
@@ -717,7 +728,7 @@
   text-transform: capitalize;
   background-color: var(--dl-color-scheme-lightgrey);
 }
-.delivery-container6 {
+.delivery-container07 {
   gap: 1em;
   flex: 0 0 auto;
   width: 100%;
@@ -740,7 +751,7 @@
   text-transform: capitalize;
   background-color: var(--dl-color-scheme-lightgrey);
 }
-.delivery-container7 {
+.delivery-container08 {
   gap: 1em;
   flex: 0 0 auto;
   width: 100%;
@@ -760,7 +771,7 @@
   text-transform: capitalize;
   background-color: var(--dl-color-scheme-lightgrey);
 }
-.delivery-container8 {
+.delivery-container09 {
   gap: var(--dl-space-space-sixunits);
   flex: 0 0 auto;
   width: auto;
@@ -771,13 +782,19 @@
   margin-bottom: var(--dl-space-space-twounits);
   justify-content: center;
 }
-.delivery-button {
-  width: 25%;
+.button {
   border-radius: 2em;
-  background-color: var(--dl-color-scheme-pink);
+  background-color: #cacace;
 }
 .delivery-button1 {
   width: 25%;
   border-radius: 2em;
+  background-color: var(--dl-color-scheme-pink);
+}
+.delivery-button2 {
+  width: 25%;
+  border-radius: 2em;
   background-color: rgb(4, 215, 190);
 }
+
+
