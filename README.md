@@ -21,7 +21,7 @@ Unwaste is a web-based platform that will help farmers share  information about 
 - [VS Code] - IDE
 
 ### Authors
-- Anas Barcbouch
+- Anas Barbouch
 - Rajakanth Kandasamy
 - Ryad Alla
 - Adlane Oussaada
