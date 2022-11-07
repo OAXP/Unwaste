@@ -54,7 +54,7 @@
           <div class="register-banner">
             <h1 class="register-text">UNwAste</h1>
             <span>Create your profile</span>
-            <form class="register-form">
+            <form class="register-form" id="register-form">
               <label>name</label>
               <input
                 type="text"
@@ -117,42 +117,55 @@
                 Already have an account ?
               </a>
               <div class="register-container2">
-                <a href="login.html" class="register-navlink1 button">
+                <button class="register-navlink1 button">
                   Register
-                </a>
+                </button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
-    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
     <script>
       window.onload = () => {
         const profile = document.getElementById('profile-type');
-		const kmInput = document.getElementById('km-input');
-		const kmRange = document.getElementById('km-range');
-		
+        const kmInput = document.getElementById('km-input');
+        const kmRange = document.getElementById('km-range');
+        
         profile.addEventListener('change', (e) => {
-          if(e.target.value === '1') {
-            document.getElementById('km-label').hidden = true;
-            kmRange.hidden = true;
-            kmInput.hidden = true;
-          } else {
-			document.getElementById('km-label').hidden = false;
-            kmRange.hidden = false;
-            kmInput.hidden = false;
-		  }
+            if(e.target.value === '1') {
+              document.getElementById('km-label').hidden = true;
+              kmRange.hidden = true;
+              kmInput.hidden = true;
+            } else {
+              document.getElementById('km-label').hidden = false;
+              kmRange.hidden = false;
+              kmInput.hidden = false;
+            }
         });
-		
-		kmInput.addEventListener('input', (e) => {
-			kmRange.innerText = `${e.target.value} KM`;
-		})
+        
+        kmInput.addEventListener('input', (e) => {
+          kmRange.innerText = `${e.target.value} KM`;
+        });
+
+        const form = document.getElementById('register-form');
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const accounts = JSON.parse(localStorage.getItem('accounts')) ?? [];
+          const account = {
+            email: document.getElementById('email-input').value,
+            pass: document.getElementById('password-input').value
+          };
+
+          accounts.push(account);
+
+          window.localStorage.setItem('accounts', JSON.stringify(accounts));
+
+          window.location.href = 'login.html';
+        })
       };
     </script>
-    <script
-      data-section-id="header"
-      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
-    ></script>
   </body>
 </html>
