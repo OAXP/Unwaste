@@ -226,19 +226,53 @@
     </div>
     <script>
       window.onload = () => {
-        let profile = document.getElementById('profile-type');
-        profile.addEventListener('change', (e) => {
-          if(e.target.value === '1') {
-            document.getElementById('km-label').hidden = true;
-            document.getElementById('km-range').hidden = true;
-            document.getElementById('km-input').hidden = true;
-          } else {
-            document.getElementById('km-label').hidden = false;
-            document.getElementById('km-range').hidden = false;
-            document.getElementById('km-input').hidden = false;
-          }
-          })
-      };
+      const comments = [
+        {
+          author: "DANE DOE",
+          content: "Really energetic and innovative organization that is truly providing a resource to farmers as well as to communities by increasing access to fresh and local food."
+        },
+        {
+          author: "RAJA DOE",
+          content: "Nice ! Haha"
+        },
+      ];
+
+      const feeds = [
+        {
+          author_name: "JANE DOE",
+          author_img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&ixlib=rb-1.2.1&w=300",
+          title: "La ferme d'André",
+          capacity: "10 people",
+          description: "Volunteer-driven Gleaning Network in Montreal that coordinates with local farmers, thousands of volunteers, and food-providing agencies.",
+          time: "2 DAYS AGO",
+          date: "October 9th",
+          availability: "All day",
+          link: "account-profile.html",
+          urgent: true,
+          contact: "514-456-9054 at 4432 Street HollyWood",
+          rules:"IN ACCORDANCE TO THE FOOD PRODUCT ACT OF QUEBEC",
+          request: false
+        },
+        {
+          author_name: "JOHN DOE",
+          author_img: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fGd1eXxlbnwwfHx8fDE2Njc1NzgwNjQ&ixlib=rb-4.0.3&w=200",
+          title: "La ferme d'Alain",
+          capacity: "20 people",
+          description: "Montreal Gleaning Network is stronger than ever, saving over ten million pounds of fresh produce for hungry people last year, alone! We are one. ",
+          time: "3 DAYS AGO",
+          date: "November 23th",
+          availability: "Noon",
+          link: "account-profile-john.html",
+          urgent: false,
+          contact: "Frittts at 294 Street Rechovol",
+          rules:"none",
+          request: false
+        },
+      ];
+      window.localStorage.setItem("comments", JSON.stringify(comments));
+      window.localStorage.setItem("feeds", JSON.stringify(feeds));
+      window.localStorage.setItem("participants", 20);
+    };
     </script>
   </body>
 </html>
