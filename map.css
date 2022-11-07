@@ -26,16 +26,24 @@
   fill: var(--dl-color-scheme-white);
   width: 24px;
   height: 24px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
+
 .header-icon03 {
   fill: var(--dl-color-scheme-white);
   width: 24px;
   height: 24px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
+
 .header-icon05 {
   fill: var(--dl-color-scheme-white);
   width: 24px;
   height: 24px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .header-container1 {
   gap: var(--dl-space-space-fourunits);
