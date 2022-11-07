@@ -826,3 +826,9 @@
     padding-bottom: var(--dl-space-space-twounits);
   }
 }
+.checked {
+  color: orange;
+}
+.starRating{
+  margin: auto;
+}
